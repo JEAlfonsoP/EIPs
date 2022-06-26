@@ -5,7 +5,7 @@ on:
     types:
       - opened
 jobs:
-  auto_merge_bot:
+  auto-merge-bot:
     runs-on: ubuntu-latest
     name: EIP Auto-Merge Bot
    # if: github.event.pull_request.draft == false && github.repository == 'ethereum/eips'
