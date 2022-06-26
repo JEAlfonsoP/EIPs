@@ -25,7 +25,7 @@ jobs:
 #          INFORMATIONAL_EDITORS: "@f/"
 #          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
           GITHUB-TOKEN: ${{ secrets.TOKEN }} 
-          MERGE_ENABLED: false
+#         MERGE_ENABLED: false
           CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1"
           ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1"
           NETWORKING_EDITORS: "@MicahZoltu,@lightclient,@axic,@SamWilsn"
