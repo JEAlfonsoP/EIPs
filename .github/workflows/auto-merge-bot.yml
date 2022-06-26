@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '14'
       - name: auto-merge-bot
-        uses: JEAlfonsoP/EIP-Bot@16ab13b9d6ce0ba7404afc4a75f2da9e3db69dbb #ethereum/EIP-Bot@e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master
+        uses: ethereum/EIP-Bot@e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master
         id: auto-merge-bot
         with:
 #          GITHUB-TOKEN: ${{ secrets.TOKEN }} 
@@ -41,10 +41,10 @@ jobs:
           INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
           MAINTAINERS: "@JEAlfonsoP,@alita-moore,@mryalamanchi"
   enable-auto-merge:
-#    if: github.repository == 'ethereum/eips'
-#    runs-on: ubuntu-latest
-#    needs: ["auto_merge_bot"]
-#    steps:
-#    - uses: alexwilson/enable-github-automerge-action@1.0.0
-#      with:
-#        github-token: ${{ secrets.TOKEN }} 
+#   if: github.repository == 'ethereum/eips'
+    runs-on: ubuntu-latest
+    needs: ["auto-merge-bot"]
+    steps:
+    - uses: alexwilson/enable-github-automerge-action@1.0.0
+      with:
+        github-token: ${{ secrets.TOKEN }} 
