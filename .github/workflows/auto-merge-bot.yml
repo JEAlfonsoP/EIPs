@@ -16,22 +16,23 @@ jobs:
         uses: ethereum/EIP-Bot@e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master
         id: auto-merge-bot
         with:
+#          GITHUB-TOKEN: ${{ secrets.TOKEN }} 
+#          CORE_EDITORS: "@d./"
+#          ERC_EDITORS: "@fake-JEAlfonsoP"
+#          NETWORKING_EDITORS: "@fake-JEAlfonsoP"
+#          INTERFACE_EDITORS: "@fake-JEAlfonsoP"
+#          META_EDITORS: "@fake-JEAlfonsoP"
+#          INFORMATIONAL_EDITORS: "@f/"
+#          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
           GITHUB-TOKEN: ${{ secrets.TOKEN }} 
-          CORE_EDITORS: "@d./"
-          ERC_EDITORS: "@fake-JEAlfonsoP"
-          NETWORKING_EDITORS: "@fake-JEAlfonsoP"
-          INTERFACE_EDITORS: "@fake-JEAlfonsoP"
-          META_EDITORS: "@fake-JEAlfonsoP"
-          INFORMATIONAL_EDITORS: "@f/"
-          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
- #         GITHUB-TOKEN: ${{ secrets.TOKEN }} 
- #         CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1"
- #         ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1"
- #         NETWORKING_EDITORS: "@MicahZoltu,@lightclient,@axic,@SamWilsn"
- #         INTERFACE_EDITORS: "@lightclient,@axic,@SamWilsn"
- #         META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
- #         INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
- #         MAINTAINERS: "@alita-moore,@mryalamanchi"
+#          MERGE_ENABLED: false
+          CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1"
+          ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1"
+          NETWORKING_EDITORS: "@MicahZoltu,@lightclient,@axic,@SamWilsn"
+          INTERFACE_EDITORS: "@lightclient,@axic,@SamWilsn"
+          META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
+          INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
+          MAINTAINERS: "@JEAlfonsoP,@alita-moore,@mryalamanchi"
 #   enable-auto-merge:
 #    if: github.repository == 'ethereum/eips'
 #    runs-on: ubuntu-latest
