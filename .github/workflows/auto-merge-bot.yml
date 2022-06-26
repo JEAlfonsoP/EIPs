@@ -6,6 +6,9 @@ jobs:
     name: EIP Auto-Merge Bot
    # if: github.event.pull_request.draft == false && github.repository == 'ethereum/eips'
     steps:
+      - name: Sleep for 37 seconds
+        run: sleep 37s
+        shell: bash
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js Environment
