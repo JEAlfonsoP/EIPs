@@ -40,7 +40,7 @@ jobs:
           INTERFACE_EDITORS: "@lightclient,@axic,@SamWilsn"
           META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
           INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
-          MAINTAINERS: "@JEAlfonsoP,@alita-moore,@mryalamanchi"
+          MAINTAINERS: "@alita-moore,@mryalamanchi"
 # enable-auto-merge:
 #   if: github.repository == 'ethereum/eips'
 #   runs-on: ubuntu-latest
