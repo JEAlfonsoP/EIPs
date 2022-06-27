@@ -13,7 +13,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Create Comment (issue)
- #      if: github.event_name == 'issues'
+        if: github.event_name == 'issues'
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.issue.number }}
