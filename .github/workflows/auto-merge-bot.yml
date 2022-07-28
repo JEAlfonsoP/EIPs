@@ -1,4 +1,3 @@
-
 on:
   pull_request_target:
     types:
@@ -12,6 +11,9 @@ jobs:
     name: EIP Auto-Merge Bot
    # if: github.event.pull_request.draft == false && github.repository == 'ethereum/eips'
     steps:
+      - name: Sleep for 17 seconds
+        run: sleep 17s
+        shell: bash
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup Node.js Environment
@@ -19,9 +21,17 @@ jobs:
         with:
           node-version: '14'
       - name: auto-merge-bot
-        uses: ethereum/EIP-Bot@master # master
+        uses: ethereum/EIP-Bot@e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master
         id: auto-merge-bot
         with:
+#          GITHUB-TOKEN: ${{ secrets.TOKEN }} 
+#          CORE_EDITORS: "@d./"
+#          ERC_EDITORS: "@fake-JEAlfonsoP"
+#          NETWORKING_EDITORS: "@fake-JEAlfonsoP"
+#          INTERFACE_EDITORS: "@fake-JEAlfonsoP"
+#          META_EDITORS: "@fake-JEAlfonsoP"
+#          INFORMATIONAL_EDITORS: "@f/"
+#          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
           GITHUB-TOKEN: ${{ secrets.TOKEN }} 
           MERGE_ENABLED: false
           CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1"
@@ -31,3 +41,12 @@ jobs:
           META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
           INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
           MAINTAINERS: "@alita-moore,@mryalamanchi"
+# enable-auto-merge:
+#   if: github.repository == 'ethereum/eips'
+#   runs-on: ubuntu-latest
+#   needs: ["auto_merge_bot"]
+#   steps:
+#   - uses: alexwilson/enable-github-automerge-action@1.0.0
+#     with:
+#       github-token: ${{ secrets.TOKEN }} 
+
