@@ -9,7 +9,7 @@ jobs:
     name: Trigger Auto Merge Bot Re-Run
 
     runs-on: ubuntu-latest
-    if: github.repository == 'ethereum/eips'
+  # if: github.repository == 'ethereum/eips'
 
     steps:
       - name: Explanation
