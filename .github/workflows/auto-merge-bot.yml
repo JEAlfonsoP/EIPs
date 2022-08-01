@@ -33,13 +33,13 @@ jobs:
 #          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
           GITHUB-TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_ENABLED: false
-          CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1"
-          ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1"
-          NETWORKING_EDITORS: "@MicahZoltu,@lightclient,@axic,@SamWilsn"
-          INTERFACE_EDITORS: "@lightclient,@axic,@SamWilsn"
-          META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
-          INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn"
-          MAINTAINERS: "@alita-moore,@mryalamanchi"
+          CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1,@JEAlfonsoP"
+          ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1,@JEAlfonsoP"
+          NETWORKING_EDITORS: "@MicahZoltu,@lightclient,@axic,@SamWilsn,@JEAlfonsoP"
+          INTERFACE_EDITORS: "@lightclient,@axic,@SamWilsn,@JEAlfonsoP"
+          META_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn,@JEAlfonsoP"
+          INFORMATIONAL_EDITORS: "@lightclient,@axic,@gcolvin,@SamWilsn,@JEAlfonsoP"
+          MAINTAINERS: "@alita-moore,@mryalamanchi,@JEAlfonsoP"
   
 # enable-auto-merge:
 #   if: github.repository == 'ethereum/eips'
