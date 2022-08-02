@@ -20,7 +20,8 @@ jobs:
           node-version: '14'
 
       - name: auto-merge-bot
-        uses: ethereum/EIP-Bot@85af0ea5584eeffc38b3af1368cd19f38ee47977 # issue 77 PR # e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master 
+        uses: ethereum/EIP-Bot@7cafae8da8a3c8436c34c138289ae9768a314dab # Pandapip PR 105
+        #85af0ea5584eeffc38b3af1368cd19f38ee47977 # issue 77 PR # e3dbec627f8c7a5bdc33ca19970e5f9c4af9b626 # master 
         id: auto-merge-bot
         with:
 #          GITHUB-TOKEN: ${{ secrets.TOKEN }} 
