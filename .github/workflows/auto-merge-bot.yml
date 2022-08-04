@@ -10,8 +10,8 @@ jobs:
    # if: github.event.pull_request.draft == false && github.repository == 'ethereum/eips'
     steps:
     # Test PR 105
-      - name: Sleep for 17 seconds
-        run: sleep 17s
+      - name: Sleep for 21 seconds
+        run: sleep 21s
         shell: bash
       - name: Checkout
         uses: actions/checkout@v2
