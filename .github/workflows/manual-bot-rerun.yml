@@ -30,7 +30,7 @@ jobs:
         uses: ethereum/EIP-Bot@90d0591e71314dc1430c6cde91bb787e185e0b4b # manual-bot-rerun
         id: rerun-workflow
         with:
-          GITHUB-TOKEN: ${{ secrets.TOKEN }}
+          GITHUB-TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PULL-NUMBER: ${{github.event.inputs.pullRequestNumber }}
           ID-TO-RERUN: ${{ github.event.inputs.idOfBotWorkflow }}
           EVENT-TYPE: ${{ github.event.inputs.eventType }}
