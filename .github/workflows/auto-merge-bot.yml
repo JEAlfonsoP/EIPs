@@ -32,7 +32,7 @@ jobs:
 #          META_EDITORS: "@fake-JEAlfonsoP"
 #          INFORMATIONAL_EDITORS: "@f/"
 #          MAINTAINERS: "@JEAlfonsoP,@fake-JEAlfonsoP"
-          GITHUB-TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB-TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          MERGE_ENABLED: false
           CORE_EDITORS: "@MicahZoltu,@lightclient,@axic,@gcolvin,@SamWilsn,@Pandapip1,@JEAlfonsoP"
           ERC_EDITORS: "@lightclient,@axic,@SamWilsn,@Pandapip1,@JEAlfonsoP"
