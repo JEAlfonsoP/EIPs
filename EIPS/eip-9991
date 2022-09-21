@@ -1,31 +1,20 @@
 ---
-eip: 9991
+eip: 
 title: Restore Contract Code at 0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4
 author: Afri Schoedon (@5chdn)
 discussions-to: https://ethereum-magicians.org/t/eip-999-restore-contract-code-at-0x863df6bfa4/130
 status: Draft
 type: Standards Track
 category: Core
-created: 2018-04-04
+created: 2022-9-18
 ---
 
 ## Simple Summary
-THIS IS A TEST FOR DELETING AN EIP. This document proposes to restore the contract code of the `WalletLibrary`
-contract at `0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4` with a patched version.
-The contract was accidentally self-destructed and renders a significant amount
+THIS IS A TEST FOR DELETING AN EIP. This document proposes to restore the contract code 
 of Ether inaccessible.
 
 ## Abstract
-The `WalletLibrary` contract was used by the
-[Parity Wallet](https://www.parity.io/) to reduce gas costs for users deploying
-multi-signature wallets on the Ethereum blockchain. It contained basic
-functionality such as confirming or revoking multi-signature transactions for
-any wallet deployed that depends on this library. The
-[accidental self-destruction](https://github.com/paritytech/parity/issues/6995)
-of the library contract caused significant amounts of Ether and other assets
-owned by many different parties to be inaccessible. This proposal suggests
-restoring the `WalletLibrary` by a
-[patched](https://github.com/parity-contracts/0x863df6bfa4) version to allow the
+The `WalletLibrary` contract was used by the version to allow the
 owners of the dependent multi-signature wallets regain access to their assets.
 
 ## Motivation
@@ -42,29 +31,9 @@ The self-destructed contract code at
 ## Rationale
 The design decision to restore the `WalletLibrary` contract code in a single
 state transition was made after lengthy discussions of
-[alternate proposals](https://gist.github.com/5chdn/a9bb8617cc8523a030126a3d1c60baf3)
-that explored different ways to improve the Ethereum protocol to allow contract
-revivals by adding different built-in contracts. It was eventually concluded
-that all of these proposals changing the EVM semantics around self-destructed
-contracts were introducing unwanted side-effects and
-
-The total supply of Ether is neither changed nor does this proposal require the
-transfer of any tokens or assets including Ether. It is assumed that this change
-is aligned with the interests both of (A) Parity Technologies that intended to
-provide a smart-contracts library for multi-signature wallets to last forever
-for its users and (B) the users of the multi-signature wallets that meant to
-safely store their assets in a contract accessible any time they desire. Lastly,
-the client-side implementation cost of this proposal is estimated to be low. A
-sample implementation will be attached and linked in the following sections.
 
 ## Backwards Compatibility
-This proposal introduces backwards incompatibilities in the state of the
-contract at `0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4`. The Ethereum protocol
-does not allow the restoration of self-destructed contracts. To implement this
-on the Ethereum blockchain, it is recommended to add the necessary state
-transition in a future hard-fork at a well-defined block number, e.g.,
-`CNSTNTNPL_FORK_BLKNUM` for the Constantinople milestone which is supposed to be
-the next scheduled hard-fork on the Ethereum road-map.
+This proposal introduces backwards incompatibilities 
 
 ## Implementation
 A proof-of-concept implementation is available for the Parity client on branch
